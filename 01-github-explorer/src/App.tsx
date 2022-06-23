@@ -1,15 +1,10 @@
 import './App.scss';
 import './styles/global.scss';
 import { RepositoryList } from './components/RepositoryList';
-import { Counter } from './components/Counter';
+import React from 'react';
 
 function App() {
-  return (
-    <>
-    <RepositoryList/>
-    <Counter />
-    </>
-  );
+  return (<RepositoryList/>);
 }
 
 export default App;
