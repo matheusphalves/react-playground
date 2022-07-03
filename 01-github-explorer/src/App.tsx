@@ -1,10 +1,18 @@
-import './App.scss';
 import './styles/global.scss';
-import { RepositoryList } from './components/RepositoryList';
-import React from 'react';
+import React, { useState } from 'react';
+import { Search } from 'components/Search/Search';
+import { GlobalStyle } from 'styles/global';
+import { RepositoryList, Repository } from 'components/Repository/RepositoryList/RepositoryList';
 
 function App() {
-  return (<RepositoryList/>);
+  const [repositories, setRepositories] = useState<Repository[]>([]);
+  return (
+    <>
+      <Search/>
+      <RepositoryList/>
+      <GlobalStyle />
+    </>
+);
 }
 
 export default App;

@@ -1,10 +1,10 @@
-import {RepositoryItem} from './RepositoryItem'
+import {RepositoryItem} from '../RepositoryItem/RepositoryItem'
 import {useState, useEffect} from 'react';
-import '../styles/repositories.scss';
 import React from 'react';
+import { Section } from './styles';
 
 
-interface Repository{
+export interface Repository{
     name: string;
     description: string;
     html_url: string
@@ -23,8 +23,8 @@ export function RepositoryList(){
     }, []);
 
     return(
-        <section className="repository-list">
-            <h1>Lista de repositórios</h1>
+        <Section>
+            <h1>Public repositories found</h1>
 
             <ul>
             {repositories.map(repository => {
@@ -32,6 +32,6 @@ export function RepositoryList(){
             })}
 
             </ul>
-        </section>
+        </Section>
     )
 }
